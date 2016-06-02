@@ -1,4 +1,4 @@
-var projects = [
+var data = [
   {
     title: 'Guessing Game',
     projectUrl: 'https://github.com/jessicamvs/guessing-game',
