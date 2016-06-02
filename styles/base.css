@@ -1,7 +1,7 @@
 /*https://css-tricks.com/perfect-full-page-background-image/*/
 
 html {
-  background: -webkit-linear-gradient(top, #1A3742, #9EA183) no-repeat center center fixed;
+  background: -webkit-linear-gradient(top, #355C7D, #F8B195) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,7 +10,7 @@ html {
 
 body {
   max-width: 960px;
-  color: #d8d9cd;
+  color: #F8B195;
   font-family: 'Alegreya Sans SC', sans-serif;
   margin: 0 auto;
 }
