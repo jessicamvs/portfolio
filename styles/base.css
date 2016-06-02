@@ -19,3 +19,18 @@ header {
   text-align: center;
   font-size: 64px;
 }
+
+a {
+  font-size: 54px;
+  text-decoration: none;
+  color: inherit;
+}
+
+time {
+  font-size: 18px;
+}
+
+section {
+  font-size: 24px;
+  text-align: center;
+}
