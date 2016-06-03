@@ -39,3 +39,14 @@ section {
 p {
   margin-bottom: 200px;
 }
+
+footer {
+  text-align: center;
+  color: #355C7D;
+  font-size: 24px;
+  padding: 20px;
+}
+
+footer > a {
+  font-size: inherit;
+}
