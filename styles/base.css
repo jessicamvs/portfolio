@@ -1,5 +1,3 @@
-/*https://css-tricks.com/perfect-full-page-background-image/*/
-
 html {
   background: -webkit-linear-gradient(top, #355C7D, #F8B195) no-repeat center center fixed;
   -webkit-background-size: cover;
