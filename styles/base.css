@@ -1,0 +1,50 @@
+html {
+  background: -webkit-linear-gradient(top, #355C7D, #F8B195) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  max-width: 960px;
+  color: #F8B195;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  font-size: 64px;
+}
+
+a {
+  font-size: 54px;
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
+
+time {
+  font-size: 18px;
+}
+
+section {
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 200px;
+}
+
+footer {
+  text-align: center;
+  color: #355C7D;
+  font-size: 24px;
+  padding: 20px;
+}
+
+footer > a {
+  font-size: inherit;
+}
