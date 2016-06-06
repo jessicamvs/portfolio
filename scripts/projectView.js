@@ -13,7 +13,7 @@ projectView.mainNavTabSelect = function() {
 
 projectView.moreLink = function() {
   $('.about-project *:nth-of-type(n+2)').hide();
-  $('#articles').on('click', 'a', function(e){
+  $('#projectDisplay').on('click', 'article > a', function(e){
     e.preventDefault();
     $(this).parent().find('.about-project').children().show();
     $(this).hide();
