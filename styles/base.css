@@ -18,6 +18,10 @@ header {
   font-size: 64px;
 }
 
+header > a {
+  color: white;
+}
+
 a {
   font-size: 54px;
   text-decoration: none;
