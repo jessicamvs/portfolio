@@ -16,3 +16,7 @@
 .mainNav a {
   font-size: 28px;
 }
+
+#filters li {
+  list-style: none;
+}
