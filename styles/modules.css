@@ -1,3 +1,18 @@
 .template {
   display: none;
 }
+
+.mainNav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mainNav li {
+  display: inline;
+  color: white;
+  margin: 20px;
+}
+
+.mainNav a {
+  font-size: 28px;
+}
