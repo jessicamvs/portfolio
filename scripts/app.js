@@ -2,6 +2,7 @@ var projects = [];
 
 function Project (obj) {
   this.title = obj.title;
+  this.category = obj.category;
   this.projectUrl = obj.projectUrl;
   this.publishDate = obj.publishDate;
   this.about = obj.about;
@@ -10,6 +11,7 @@ function Project (obj) {
 Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
 
+  $newProject.attr('data-category', this.category);
   $newProject.find('h1 a').text(this.title).attr('href', this.projectUrl);
   $newProject.find('time[pubdate]').attr('title', this.publishDate);
   $newProject.find('time').html('Published about ' + parseInt((new Date() - new Date(this.publishDate))/60/60/24/1000) + ' days ago');
