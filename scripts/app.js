@@ -10,7 +10,7 @@ function Project (obj) {
 Project.prototype.toHtml = function() {
   var $newProject = $('.template').clone();
 
-  $newProject.find('a').text(this.title).attr('href', this.projectUrl);
+  $newProject.find('h1 a').text(this.title).attr('href', this.projectUrl);
   $newProject.find('time[pubdate]').attr('title', this.publishDate);
   $newProject.find('time').html('Published about ' + parseInt((new Date() - new Date(this.publishDate))/60/60/24/1000) + ' days ago');
   $newProject.find('.about-project').html(this.about);
