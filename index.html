@@ -4,6 +4,7 @@
     <title>Jessica's Portfolio</title>
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -11,18 +12,47 @@
   <body>
     <header id="top">
       <h1>Jessica Soltero</h1>
-      <a href="https://github.com/jessicamvs"><img id="github" src="imgs/githubLogo.png" alt="Github Logo" /></a>
+      <a href="https://github.com/jessicamvs" class="icon-github"></a>
       <a href="https://www.linkedin.com/in/jessica-vasquez-soltero-70624995"><img id="linkedin" src="imgs/linkedinLogo.png" alt="LinkedIn Logo" /></a>
     </header>
+    <nav class="mainNav">
+      <ul>
+        <li class="tab icon-home" data-content="home"><a href="#"> Home</a></li>
+        <li class="tab icon-menu" data-content="projects"><a href="#"> Projects</a></li>
+        <li class="tab icon-happy2" data-content="aboutMe"><a href="#"> About Me</a></li>
+      </ul>
+    </nav>
     <main>
-      <section id="projectDisplay">
-        <article class="template">
-          <header>
-            <h1><a href="">Project Title</a></h1>
-            <time pubdate>Published This Many Days Ago</time>
-          </header>
-          <section class="about-project">Info about my project!</section>
-        </article>
+      <section id="projects" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Project --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <section id="projectDisplay">
+          <article class="template">
+            <header>
+              <h1><a href="">Project Title</a></h1>
+              <time pubdate>Published This Many Days Ago</time>
+            </header>
+            <section class="about-project">Info about my project!</section>
+            <a href="#">More &rarr;</a>
+          </article>
+        </section>
+      </section>
+      <section id="aboutMe" class="tab-content">
+        <header>
+          Welcome to my Portfolio
+        </header>
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
       </section>
     </main>
     <footer>
@@ -31,4 +61,5 @@
   </body>
   <script type="text/javascript" src="scripts/projects.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/projectView.js"></script>
 </html>

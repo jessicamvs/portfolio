@@ -8,14 +8,19 @@ html {
 
 body {
   max-width: 960px;
-  color: #F8B195;
+  color: white;
   font-family: 'Alegreya Sans SC', sans-serif;
   margin: 0 auto;
 }
 
 header {
+  color: #F8B195;
   text-align: center;
-  font-size: 64px;
+  font-size: 38px;
+}
+
+header > a {
+  color: white;
 }
 
 a {
@@ -34,8 +39,8 @@ section {
   text-align: center;
 }
 
-p {
-  margin-bottom: 200px;
+hr {
+  margin-top: 200px;
 }
 
 footer {
