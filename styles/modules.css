@@ -4,9 +4,13 @@
 
 div.icon-menu {
   font-size: 2em;
-  position:absolute;
+  /*position:absolute;
   top:0;
-  right:0;
+  right:0;*/
+}
+
+.icon-github {
+  font-size: 2em;
 }
 
 .mainNav {
@@ -28,7 +32,7 @@ div.icon-menu {
 }
 
 .mainNav a {
-  font-size: 28px;
+  font-size: 2em;
 }
 
 /* DONE: Float the main header to the left, to make room for the hamburger menu. */
