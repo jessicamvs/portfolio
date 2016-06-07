@@ -4,9 +4,7 @@
 
 div.icon-menu {
   font-size: 2em;
-  /*position:absolute;
-  top:0;
-  right:0;*/
+  text-align: right;
 }
 
 .icon-github {
@@ -16,6 +14,9 @@ div.icon-menu {
 .mainNav {
   margin: 0 auto;
   text-align: center;
+  position:absolute;
+  top:0;
+  right:0;
 }
 
 .mainNav ul {
@@ -29,18 +30,13 @@ div.icon-menu {
 
 .mainNav:hover ul {
   display: block;
+  background-color: hsla(17, 88%, 78%, 0.9);
+  padding: 1em;
 }
 
 .mainNav a {
   font-size: 2em;
 }
-
-/* DONE: Float the main header to the left, to make room for the hamburger menu. */
-/*.heading-group-h1 {
-  float: left;
-  padding: 0 0 .2em 1em;
-}*/
-
 
 #filters li {
   list-style: none;
