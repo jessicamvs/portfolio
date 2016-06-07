@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  max-width: 960px;
+  /*max-width: 960px;*/
   color: white;
   font-family: 'Alegreya Sans SC', sans-serif;
   margin: 0 auto;

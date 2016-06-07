@@ -2,20 +2,41 @@
   display: none;
 }
 
+div.icon-menu {
+  font-size: 2em;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
 .mainNav {
   margin: 0 auto;
   text-align: center;
 }
 
-.mainNav li {
-  display: inline;
+.mainNav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
   color: white;
   margin: 20px;
+}
+
+.mainNav:hover ul {
+  display: block;
 }
 
 .mainNav a {
   font-size: 28px;
 }
+
+/* DONE: Float the main header to the left, to make room for the hamburger menu. */
+/*.heading-group-h1 {
+  float: left;
+  padding: 0 0 .2em 1em;
+}*/
+
 
 #filters li {
   list-style: none;
