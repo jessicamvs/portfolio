@@ -46,6 +46,8 @@ footer {
   text-align: center;
   color: #355C7D;
   font-size: 1.2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 footer > a {
