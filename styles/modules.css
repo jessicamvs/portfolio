@@ -46,17 +46,17 @@ div.icon-menu {
   .icon-menu{
     display: none;
   }
-/*.icon-menu{
-  display: none;
+
+  .mainNav ul {
+    display: unset;
+  }
+
+  .mainNav li {
+    display: inline-block;
+    margin: 1em;
+  }
+
+  .mainNav {
+    position: static;
+  }
 }
-.main-nav ul {
-    display: flex;
-  }
-.main-nav:hover ul {
-    display: flex;
-  }
-  .main-nav li {
-      padding-left: 2em;
-      padding-right: 2em;
-    }*/
-  }
