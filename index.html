@@ -11,16 +11,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script id="projectTemplate" type="text/x-handlebars-template">
-      <section id="projectDisplay">
-        <article>
-          <header>
-            <h1><a href='"' + {{projectUrl}} + '"'>{{title}}</a></h1>
-            <time pubdate>Published This Many Days Ago</time>
-          </header>
-          <section class="about-project">{{{about}}}</section>
-          <a href="#">More &rarr;</a>
-        </article>
-      </section>
+      {{#each projectData}}
+        <section id="projectDisplay">
+          <article>
+            <header>
+              <h1><a href='"' + {{projectUrl}} + '"'>{{title}}</a></h1>
+              <time pubdate>Published This Many Days Ago</time>
+            </header>
+            <section class="about-project">{{{about}}}</section>
+            <a href="#">More &rarr;</a>
+          </article>
+        </section>
+      {{/each}}
     </script>
   </head>
   <body>
