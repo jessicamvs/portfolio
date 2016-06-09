@@ -13,7 +13,6 @@
     <script id="projectTemplate" type="text/x-handlebars-template">
       {{#each data}}
           <article data-category="{{category}}">
-          <!-- <article> -->
             <header>
               <h1><a href="{{projectUrl}}">{{title}}</a></h1>
               <time pubdate>{{daysAgoPub}}</time>
@@ -50,18 +49,7 @@
             </li>
           </ul>
         </div>
-        <section id="projectDisplay">
-        <!-- <section id="projectDisplay">
-          <article class="template">
-            <header>
-              <h1><a href="">Project Title</a></h1>
-              <time pubdate>Published This Many Days Ago</time>
-            </header>
-            <section class="about-project">Info about my project!</section>
-            <a href="#">More &rarr;</a>
-          </article>
-        </section> -->
-        </section>
+        <section id="projectDisplay"></section>
       </section>
       <section id="aboutMe" class="tab-content">
         <header>
