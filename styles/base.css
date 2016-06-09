@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  max-width: 960px;
   color: white;
   font-family: 'Alegreya Sans SC', sans-serif;
   margin: 0 auto;
@@ -16,7 +15,7 @@ body {
 header {
   color: #F8B195;
   text-align: center;
-  font-size: 38px;
+  font-size: 1.5em;
 }
 
 header > a {
@@ -24,30 +23,31 @@ header > a {
 }
 
 a {
-  font-size: 54px;
+  font-size: .9em;
   text-decoration: none;
   color: inherit;
   display: inline;
 }
 
 time {
-  font-size: 18px;
+  font-size: .6em;
 }
 
 section {
-  font-size: 24px;
+  font-size: 1.1em;
   text-align: center;
 }
 
 hr {
-  margin-top: 200px;
+  margin-top: 2em;
 }
 
 footer {
   text-align: center;
   color: #355C7D;
-  font-size: 24px;
-  padding: 20px;
+  font-size: 1.2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 footer > a {
