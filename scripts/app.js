@@ -11,8 +11,8 @@ function Project (obj) {
 Project.prototype.toHtml = function() {
 
   Handlebars.registerHelper('daysAgoPub', function() {
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
-    this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+    this.daysAgo = parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000);
+    this.publishStatus = this.publishDate ? 'published about ' + this.daysAgo + ' days ago' : '(draft)';
     return this.publishStatus;
   });
 
@@ -24,7 +24,7 @@ Project.prototype.toHtml = function() {
   };
 
   var theCompiled = theTemplate(context);
-  $('#projects').append(theCompiled);
+  $('#projectDisplay').append(theCompiled);
 
   // var $newProject = $('.template').clone();
   //

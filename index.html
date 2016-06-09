@@ -12,16 +12,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script id="projectTemplate" type="text/x-handlebars-template">
       {{#each projectData}}
-        <section id="projectDisplay">
-          <article>
+          <article data-category="{{category}}">
+          <!-- <article> -->
             <header>
-              <h1><a href='"' + {{projectUrl}} + '"'>{{title}}</a></h1>
-              <time pubdate>Published This Many Days Ago</time>
+              <h1><a href="{{projectUrl}}">{{title}}</a></h1>
+              <time pubdate>{{daysAgoPub}}</time>
             </header>
             <section class="about-project">{{{about}}}</section>
             <a href="#">More &rarr;</a>
           </article>
-        </section>
+          <!-- <hr> -->
       {{/each}}
     </script>
   </head>
@@ -50,6 +50,7 @@
             </li>
           </ul>
         </div>
+        <section id="projectDisplay">
         <!-- <section id="projectDisplay">
           <article class="template">
             <header>
@@ -60,6 +61,7 @@
             <a href="#">More &rarr;</a>
           </article>
         </section> -->
+        </section>
       </section>
       <section id="aboutMe" class="tab-content">
         <header>
