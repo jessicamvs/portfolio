@@ -20,7 +20,7 @@ Project.prototype.toHtml = function() {
   var theTemplate = Handlebars.compile(theTemplateScript);
 
   var context = {
-    projectData: data
+    data
   };
 
   var theCompiled = theTemplate(context);
@@ -47,6 +47,10 @@ data.forEach(function(obj) {
   projects.push(new Project(obj));
 });
 
-projects.forEach(function(a){
-  $('#projectDisplay').append(a.toHtml());
+// projects.forEach(function(a){
+//   $('#projectDisplay').append(a.toHtml());
+// });
+
+$(document).ready(function() {
+  Project.prototype.toHtml();
 });
