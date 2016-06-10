@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="vendor/styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script id="projectTemplate" type="text/x-handlebars-template">
+      {{#each data}}
+          <article data-category="{{category}}">
+            <header>
+              <h1><a href="{{projectUrl}}">{{title}}</a></h1>
+              <time pubdate>{{daysAgoPub}}</time>
+            </header>
+            <section class="about-project">{{{about}}}</section>
+            <a href="#">More &rarr;</a>
+            <hr>
+          </article>
+      {{/each}}
+    </script>
   </head>
   <body>
     <header id="top">
@@ -35,16 +50,7 @@
             </li>
           </ul>
         </div>
-        <section id="projectDisplay">
-          <article class="template">
-            <header>
-              <h1><a href="">Project Title</a></h1>
-              <time pubdate>Published This Many Days Ago</time>
-            </header>
-            <section class="about-project">Info about my project!</section>
-            <a href="#">More &rarr;</a>
-          </article>
-        </section>
+        <section id="projectDisplay"></section>
       </section>
       <section id="aboutMe" class="tab-content">
         <header>

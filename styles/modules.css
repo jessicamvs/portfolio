@@ -1,7 +1,3 @@
-.template {
-  display: none;
-}
-
 div.icon-menu {
   font-size: 2em;
   text-align: right;
@@ -11,27 +7,14 @@ div.icon-menu {
   font-size: 2em;
 }
 
-.mainNav {
-  margin: 0 auto;
-  text-align: center;
-  position:absolute;
-  top:0;
-  right:0;
-}
-
 .mainNav ul {
-  display: none;
-  padding: 0;
   list-style: none;
-  clear: both;
   color: white;
-  margin: 20px;
 }
 
 .mainNav:hover ul {
   display: block;
   background-color: hsla(17, 88%, 78%, 0.9);
-  padding: 1em;
 }
 
 .mainNav a {
@@ -40,23 +23,4 @@ div.icon-menu {
 
 #filters li {
   list-style: none;
-}
-
-@media only screen and (min-width: 600px) {
-  .icon-menu{
-    display: none;
-  }
-
-  .mainNav ul {
-    display: unset;
-  }
-
-  .mainNav li {
-    display: inline-block;
-    margin: 1em;
-  }
-
-  .mainNav {
-    position: static;
-  }
 }

@@ -9,17 +9,23 @@ function Project (obj) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('.template').clone();
 
-  $newProject.attr('data-category', this.category);
-  $newProject.find('h1 a').text(this.title).attr('href', this.projectUrl);
-  $newProject.find('time[pubdate]').attr('title', this.publishDate);
-  $newProject.find('time').html('Published about ' + parseInt((new Date() - new Date(this.publishDate))/60/60/24/1000) + ' days ago');
-  $newProject.find('.about-project').html(this.about);
-  $newProject.append('<hr>');
-  $newProject.removeClass('template');
+  Handlebars.registerHelper('daysAgoPub', function() {
+    this.daysAgo = parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000);
+    this.publishStatus = this.publishDate ? 'published about ' + this.daysAgo + ' days ago' : '(draft)';
+    return this.publishStatus;
+  });
 
-  return $newProject;
+  var theTemplateScript = $('#projectTemplate').html();
+  var theTemplate = Handlebars.compile(theTemplateScript);
+
+  var context = {
+    data
+  };
+
+  var theCompiled = theTemplate(context);
+  $('#projectDisplay').append(theCompiled);
+
 };
 
 data.sort(function(a,b) {
@@ -30,6 +36,6 @@ data.forEach(function(obj) {
   projects.push(new Project(obj));
 });
 
-projects.forEach(function(a){
-  $('#projectDisplay').append(a.toHtml());
+$(document).ready(function() {
+  Project.prototype.toHtml();
 });
