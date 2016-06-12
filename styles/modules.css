@@ -12,10 +12,10 @@ div.icon-menu {
   color: white;
 }
 
-.mainNav:hover ul {
+/*.mainNav:hover ul {
   display: block;
   background-color: hsla(17, 88%, 78%, 0.9);
-}
+}*/
 
 .mainNav a {
   font-size: 2em;
