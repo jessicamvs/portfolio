@@ -22,14 +22,15 @@ projectView.handleFilter = function() {
 
       $('article[data-category="' + choice + '"]').fadeIn();
     } else {
-      !$(this).hasClass('template').show();
+      $('article').show();
+
     }
   });
 };
 
 projectView.mainNavTabSelect = function() {
   $('.mainNav').on('click', 'li', function(e){
-    e.preventDefault();
+    // e.preventDefault(); this might be un-needed
     $('.tab-content').hide();
     var $tabSelection = $(this).data('content');
     $('#' + $tabSelection).show();
