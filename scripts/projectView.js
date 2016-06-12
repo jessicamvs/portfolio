@@ -40,11 +40,11 @@ projectView.mainNavTabSelect = function() {
 
 projectView.hamburgerToggle = function() {
   $('div.icon-menu').on('click', function() {
-    $('.mainNav ul').toggle('slow');
+    $('.mainNav ul').toggle('slow').addClass('menuNavColor');
   });
   $(window).on('resize', function() {
     if ($(window).width() >= 600) {
-      $('.mainNav ul').show();
+      $('.mainNav ul').show().removeClass('menuNavColor');
     } else {
       $('.mainNav ul').hide();
     }

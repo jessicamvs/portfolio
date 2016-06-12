@@ -53,3 +53,12 @@ footer {
 footer > a {
   font-size: inherit;
 }
+
+select {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+select option{
+	background-color: transparent;
+}

@@ -19,13 +19,9 @@ Project.prototype.toHtml = function() {
   var theTemplateScript = $('#projectTemplate').html();
   var theTemplate = Handlebars.compile(theTemplateScript);
 
-  var context = {
-    data
-  };
+  var theCompiled = theTemplate(this);
 
-  var theCompiled = theTemplate(context);
-  $('#projectDisplay').append(theCompiled);
-
+  return theCompiled;
 };
 
 data.sort(function(a,b) {
@@ -36,6 +32,6 @@ data.forEach(function(obj) {
   projects.push(new Project(obj));
 });
 
-$(document).ready(function() {
-  Project.prototype.toHtml();
+projects.forEach(function(obj) {
+  $('#projectDisplay').append(obj.toHtml());
 });

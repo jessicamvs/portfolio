@@ -3,8 +3,10 @@ div.icon-menu {
   text-align: right;
 }
 
-.icon-github {
-  font-size: 2em;
+header > a {
+  font-size: 1.5em;
+  display: inline-block;
+  padding: .5em 1em 1em 1em;
 }
 
 .mainNav ul {
@@ -12,15 +14,21 @@ div.icon-menu {
   color: white;
 }
 
-/*.mainNav:hover ul {
-  display: block;
+.menuNavColor {
   background-color: hsla(17, 88%, 78%, 0.9);
-}*/
+}
 
+.menuNavColor li {
+  padding: .7em;
+}
 .mainNav a {
   font-size: 2em;
 }
 
 #filters li {
   list-style: none;
+}
+
+#filters {
+  padding-left: 0;
 }
