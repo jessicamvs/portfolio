@@ -38,6 +38,10 @@ section {
   text-align: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 hr {
   margin-top: 1.8em;
 }
