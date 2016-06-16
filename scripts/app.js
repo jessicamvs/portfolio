@@ -34,6 +34,19 @@ Project.prepareProjects = function(data) {
   });
 };
 
+Project.fetchProjects = function() {
+  if(localStorage.data) {
+    Project.prepareProjects(JSON.parse(localStorage.data));
+    Project.renderIndex();
+  } else {
+    $.getJSON('data/projects.json', function(data) {
+      Project.prepareProjects(data);
+      localStorage.setItem('data', JSON.stringify(data));
+      Project.renderIndex();
+    });
+  }
+};
+
 projects.forEach(function(obj) {
   $('#projectDisplay').append(obj.toHtml());
 });
