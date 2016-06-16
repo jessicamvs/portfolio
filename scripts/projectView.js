@@ -4,7 +4,6 @@ var projectView = {};
 projectView.fillFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
-
       var optionSelected = $(this).attr('data-category');
       var assignOptionVal = '<option value="' + optionSelected + '">' + optionSelected + '</option>';
       if ($('#category-filter option[value="' + optionSelected + '"]').length === 0) {
@@ -19,11 +18,9 @@ projectView.handleFilter = function() {
     if($(this).val()) {
       $('article').hide();
       var choice = $(this).val();
-
       $('article[data-category="' + choice + '"]').fadeIn();
     } else {
       $('article').show();
-
     }
   });
 };
@@ -34,7 +31,6 @@ projectView.mainNavTabSelect = function() {
     var $tabSelection = $(this).data('content');
     $('#' + $tabSelection).show();
   });
-
   $('.mainNav .tab:first').click();
 };
 
@@ -51,9 +47,6 @@ projectView.hamburgerToggle = function() {
   });
 };
 
-
-
-
 projectView.moreLink = function() {
   $('.about-project *:nth-of-type(n+2)').hide();
   $('#projectDisplay').on('click', 'article > a', function(e){
@@ -63,10 +56,14 @@ projectView.moreLink = function() {
   });
 };
 
-$(function() {
+projectView.renderIndex = function() {
+  Project.all.forEach(function(obj) {
+    $('#projectDisplay').append(obj.toHtml());
+  });
+
   projectView.fillFilters();
   projectView.handleFilter();
   projectView.mainNavTabSelect();
   projectView.hamburgerToggle();
   projectView.moreLink();
-});
+};
