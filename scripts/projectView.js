@@ -60,6 +60,10 @@ projectView.renderIndex = function() {
   Project.all.forEach(function(obj) {
     $('#projectDisplay').append(obj.toHtml());
   });
+
+  $('#totalProjects').text(Project.all.length);
+  $('#wordCount').text(Project.totalNumAboutWords());
+
   var template = Handlebars.compile($('#statTemplate').html());
 
   Project.numWordsInAbout().forEach(function(ele) {
