@@ -9,11 +9,6 @@ header > a {
   padding: .5em 1em 1em 1em;
 }
 
-.mainNav ul {
-  list-style: none;
-  color: white;
-}
-
 .menuNavColor {
   background-color: hsla(17, 88%, 78%, 0.9);
 }
@@ -23,10 +18,6 @@ header > a {
 }
 .mainNav a {
   font-size: 2em;
-}
-
-#filters li {
-  list-style: none;
 }
 
 #filters {
