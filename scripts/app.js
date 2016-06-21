@@ -34,12 +34,21 @@ Project.prepareProjects = function(data) {
   });
 };
 
-Project.numWordsInAbout = function () {
+Project.numWordsInAbout = function() {
   return Project.all.map(function(ele) {
     return {
       title: ele.title,
       numWords: ele.about.split(' ').length
     };
+  });
+};
+
+Project.totalNumAboutWords = function() {
+  return Project.all.map(function(ele) {
+    return ele.about.split(' ').length;
+  })
+  .reduce(function(a, b) {
+    return a + b;
   });
 };
 
