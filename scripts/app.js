@@ -34,15 +34,24 @@ Project.prepareProjects = function(data) {
   });
 };
 
-Project.fetchProjects = function() {
+Project.numWordsInAbout = function () {
+  return Project.all.map(function(ele) {
+    return {
+      title: ele.title,
+      numWords: ele.about.split(' ').length
+    };
+  });
+};
+
+Project.fetchProjects = function(callback1) {
   if(localStorage.data) {
     Project.prepareProjects(JSON.parse(localStorage.data));
-    projectView.renderIndex();
+    callback1();
   } else {
     $.getJSON('data/projects.json', function(data) {
       Project.prepareProjects(data);
       localStorage.setItem('data', JSON.stringify(data));
-      projectView.renderIndex();
+      callback1();
     });
   }
 };
