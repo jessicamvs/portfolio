@@ -60,6 +60,11 @@ projectView.renderIndex = function() {
   Project.all.forEach(function(obj) {
     $('#projectDisplay').append(obj.toHtml());
   });
+  var template = Handlebars.compile($('#statTemplate').html());
+
+  Project.numWordsInAbout().forEach(function(ele) {
+    $('#statList').append(template(ele));
+  });
 
   projectView.fillFilters();
   projectView.handleFilter();
