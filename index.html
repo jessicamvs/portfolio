@@ -22,6 +22,9 @@
             <hr>
           </article>
     </script>
+    <script id="statTemplate" type="text/x-handlebars-template">
+          <li>{{title}}'s description has {{numWords}} words</li>
+    </script>
   </head>
   <body>
     <header id="top">
@@ -35,6 +38,7 @@
         <li class="tab icon-home" data-content="home"><a href="#"> Home</a></li>
         <li class="tab icon-menu" data-content="projects"><a href="#"> Projects</a></li>
         <li class="tab icon-happy" data-content="aboutMe"><a href="#"> About Me</a></li>
+        <li class="tab icon-calculator" data-content="stats"><a href="#"> Stats</a></li>
       </ul>
     </nav>
     <main>
@@ -60,6 +64,14 @@
           </p>
         </section>
       </section>
+      <section id="stats" class="tab-content">
+        <header>
+          Project Stats
+        </header>
+        <p>Total Projects: <span id="totalProjects"></span></p>
+        <p>Word Count: <span id="wordCount"></span></p>
+        <ul id="statList"></ul>
+      </section>
     </main>
     <footer>
       &copy; 2016 jessicamvs | Portfolio | <a href="#top">Back to Top</a>
@@ -67,7 +79,7 @@
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
     <script type="text/javascript">
-    Project.fetchProjects();
+      Project.fetchProjects(projectView.renderIndex);
     </script>
   </body>
 </html>
