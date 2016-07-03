@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="vendor/page.js"></script>
     <script id="projectTemplate" type="text/x-handlebars-template">
           <article data-category="{{category}}">
             <header>
@@ -35,10 +36,10 @@
     <nav class="mainNav">
       <div class="icon-menu"></div>
       <ul>
-        <li class="tab icon-home" data-content="home"><a href="#"> Home</a></li>
-        <li class="tab icon-menu" data-content="projects"><a href="#"> Projects</a></li>
-        <li class="tab icon-happy" data-content="aboutMe"><a href="#"> About Me</a></li>
-        <li class="tab icon-calculator" data-content="stats"><a href="#"> Stats</a></li>
+        <li class="tab icon-home" data-content="home"><a href="/"> Home</a></li>
+        <li class="tab icon-menu" data-content="projects"><a href="/projects"> Projects</a></li>
+        <li class="tab icon-happy" data-content="aboutMe"><a href="/about"> About Me</a></li>
+        <li class="tab icon-calculator" data-content="stats"><a href="/stats"> Stats</a></li>
       </ul>
     </nav>
     <main>
@@ -78,8 +79,10 @@
     </footer>
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
-    <script type="text/javascript">
-      Project.fetchProjects(projectView.renderIndex);
-    </script>
+    <script type="text/javascript" src="scripts/homeController.js"></script>
+    <script type="text/javascript" src="scripts/projectController.js"></script>
+    <script type="text/javascript" src="scripts/aboutController.js"></script>
+    <script type="text/javascript" src="scripts/statsController.js"></script>
+    <script type="text/javascript" src="scripts/routes.js"></script>
   </body>
 </html>
