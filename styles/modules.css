@@ -20,6 +20,10 @@ header > a {
   font-size: 2em;
 }
 
+.errorPage {
+  font-size: 2em;
+}
+
 #filters {
   padding-left: 0;
 }

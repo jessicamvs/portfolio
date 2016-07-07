@@ -27,15 +27,6 @@
     });
   };
 
-  // projectView.mainNavTabSelect = function() {
-  //   $('.mainNav').on('click', 'li', function(e){
-  //     $('.tab-content').hide();
-  //     var $tabSelection = $(this).data('content');
-  //     $('#' + $tabSelection).show();
-  //   });
-  //   $('.mainNav .tab:first').click();
-  // };
-
   projectView.hamburgerToggle = function() {
     $('div.icon-menu').on('click', function() {
       $('.mainNav ul').toggle('slow').addClass('menuNavColor');

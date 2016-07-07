@@ -26,6 +26,16 @@
     <script id="statTemplate" type="text/x-handlebars-template">
           <li>{{title}}'s description has {{numWords}} words</li>
     </script>
+    <script id="myRepo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+      </li>
+      <hr>
+    </script>
   </head>
   <body>
     <header id="top">
@@ -36,10 +46,10 @@
     <nav class="mainNav">
       <div class="icon-menu"></div>
       <ul>
-        <li class="tab icon-home" data-content="home"><a href="/"> Home</a></li>
-        <li class="tab icon-menu" data-content="projects"><a href="/projects"> Projects</a></li>
-        <li class="tab icon-happy" data-content="aboutMe"><a href="/about"> About Me</a></li>
-        <li class="tab icon-calculator" data-content="stats"><a href="/stats"> Stats</a></li>
+        <li class="tab icon-home"><a href="/"> Home</a></li>
+        <li class="tab icon-menu"><a href="/projects"> Projects</a></li>
+        <li class="tab icon-happy"><a href="/about"> About Me</a></li>
+        <li class="tab icon-calculator"><a href="/stats"> Stats</a></li>
       </ul>
     </nav>
     <main>
@@ -63,6 +73,7 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <ul></ul>
         </section>
       </section>
       <section id="stats" class="tab-content">
@@ -73,16 +84,25 @@
         <p>Word Count: <span id="wordCount"></span></p>
         <ul id="statList"></ul>
       </section>
+      <section id="404" class="tab-content">
+        <header class="errorPage">404</header>
+        <p class="errorPage">
+          Oops! The page you're looking for doesn't exist!
+        </p>
+      </section>
     </main>
     <footer>
       &copy; 2016 jessicamvs | Portfolio | <a href="#top">Back to Top</a>
     </footer>
+    <script src="/scripts/githubToken.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
     <script type="text/javascript" src="scripts/homeController.js"></script>
     <script type="text/javascript" src="scripts/projectController.js"></script>
     <script type="text/javascript" src="scripts/aboutController.js"></script>
     <script type="text/javascript" src="scripts/statsController.js"></script>
+    <script type="text/javascript" src="scripts/repoView.js"></script>
+    <script type="text/javascript" src="scripts/repo.js"></script>
     <script type="text/javascript" src="scripts/routes.js"></script>
   </body>
 </html>
