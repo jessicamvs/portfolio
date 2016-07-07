@@ -2,7 +2,7 @@
   var repoView = {};
 
   var ui = function() {
-    var $about = $('#about');
+    var $about = $('#aboutMe');
 
     $about.find('ul').empty();
     $about.show().siblings().hide();
@@ -14,6 +14,7 @@
     ui();
 
     $('#aboutMe ul').append(
+      myRepos.with('name').map(render)
     );
   };
 

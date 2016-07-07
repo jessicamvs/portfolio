@@ -2,8 +2,10 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    $('.tab-content').hide();
-    $('#aboutMe').show();
+    console.log('what');
+    $('#aboutMe').show().siblings().hide();
+
+    myRepos.requestRepos(repoView.index);
   };
 
   module.aboutController = aboutController;
