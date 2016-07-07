@@ -5,7 +5,7 @@
 
   myRepos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/geoffreycc/repos',
+      url: 'https://api.github.com/users/jessicamvs/repos',
       type: 'GET',
       headers: {'Authorization': 'token ' + GITHUB_TOKEN},
       success: function(data) {

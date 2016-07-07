@@ -30,12 +30,9 @@
       <li>
         <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
         <p>Description: {{description}}</p>
-        <p>Language: {{language}}</p>
+        <p>Primary Language: {{language}}</p>
         <p>Created: {{created_at}}</p>
         <p>Last updated: {{updated_at}}</p>
-        {{#if watchers_count}}
-          <p>{{watchers_count}} watching this repo</p>
-        {{/if}}
       </li>
     </script>
   </head>
@@ -48,10 +45,10 @@
     <nav class="mainNav">
       <div class="icon-menu"></div>
       <ul>
-        <li class="tab icon-home" data-content="home"><a href="/"> Home</a></li>
-        <li class="tab icon-menu" data-content="projects"><a href="/projects"> Projects</a></li>
-        <li class="tab icon-happy" data-content="aboutMe"><a href="/about"> About Me</a></li>
-        <li class="tab icon-calculator" data-content="stats"><a href="/stats"> Stats</a></li>
+        <li class="tab icon-home"><a href="/"> Home</a></li>
+        <li class="tab icon-menu"><a href="/projects"> Projects</a></li>
+        <li class="tab icon-happy"><a href="/about"> About Me</a></li>
+        <li class="tab icon-calculator"><a href="/stats"> Stats</a></li>
       </ul>
     </nav>
     <main>
