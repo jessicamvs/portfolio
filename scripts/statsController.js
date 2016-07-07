@@ -2,8 +2,7 @@
   var statsController = {};
 
   statsController.index = function() {
-    $('.tab-content').hide();
-    $('#stats').show();
+    $('#stats').show().siblings().hide();
   };
 
   module.statsController = statsController;
