@@ -15,11 +15,5 @@
     });
   };
 
-  myRepos.with = function(attr) {
-    return myRepos.all.filter(function(repo) {
-      return repo[attr];
-    });
-  };
-
   module.myRepos = myRepos;
 })(window);

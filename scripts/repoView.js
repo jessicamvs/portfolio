@@ -14,7 +14,7 @@
     ui();
 
     $('#aboutMe ul').append(
-      myRepos.with('name').map(render)
+      myRepos.all.map(render)
     );
   };
 
