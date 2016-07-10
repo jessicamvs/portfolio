@@ -3,16 +3,16 @@
 
   myRepos.all = [];
 
-  myRepos.requestRepos = function(callback) {
+  repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/jessicamvs/repos',
+      url: '/github/user/repos' +
+            '?per_page=100' +
+            '&sort=updated',
       type: 'GET',
-      headers: {'Authorization': 'token ' + GITHUB_TOKEN},
-      success: function(data) {
-        myRepos.all = data;
-        callback();
+      success: function(data, message, xhr) {
+        repos.all = data;
       }
-    });
+    }).done(callback);
   };
 
   module.myRepos = myRepos;
