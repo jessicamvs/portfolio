@@ -3,7 +3,7 @@
 
   myRepos.all = [];
 
-  repos.requestRepos = function(callback) {
+  myRepos.requestRepos = function(callback) {
     $.ajax({
       url: 'github/user/repos' +
             '?per_page=100' +
