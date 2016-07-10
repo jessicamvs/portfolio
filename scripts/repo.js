@@ -10,7 +10,7 @@
             '&sort=updated',
       type: 'GET',
       success: function(data) {
-        repos.all = data;
+        myRepos.all = data;
       }
     }).done(callback);
   };
