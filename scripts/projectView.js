@@ -10,8 +10,7 @@
       return project .publishStatus;
     });
 
-    var theTemplateScript = $('#projectTemplate').html();
-    var theTemplate = Handlebars.compile(theTemplateScript);
+    var theTemplate = Handlebars.compile($('#projectTemplate').html());
 
     return theTemplate(project);
   };
@@ -53,19 +52,19 @@
     });
   };
 
-  projectView.moreLink = function() {
-    $('.about-project *:nth-of-type(n+2)').hide();
-    $('#projectDisplay').on('click', 'article > a', function(e){
-      e.preventDefault();
-      $(this).parent().find('.about-project').children().show();
-      $(this).hide();
-    });
-  };
+  // projectView.moreLink = function() {
+  //   $('.about-project *:nth-of-type(n+2)').hide();
+  //   $('#projectDisplay').on('click', 'article > a', function(e){
+  //     e.preventDefault();
+  //     $(this).parent().find('.about-project').children().show();
+  //     $(this).hide();
+  //   });
+  // };
 
   projectView.index = function(projects) {
     $('#projects').show().siblings().hide();
 
-    $('#projectDisplay').children().remove();
+    $('#projectDisplay section').remove();
     projects.forEach(function(a) {
       $('#projectDisplay').append(render(a));
     });
@@ -73,11 +72,10 @@
     projectView.fillFilters();
     projectView.handleFilter();
     projectView.hamburgerToggle();
-    projectView.moreLink();
-        // DONE: Replace setTeasers with just the truncation logic, if needed:
-    // if ($('#articles article').length > 1) {
-    //   $('.article-body *:nth-of-type(n+2)').hide();
-    // }
+    // projectView.moreLink();
+    if ($('#projectDisplay section').length > 1) {
+      $('.about-project *:nth-of-type(n+2)').hide();
+    }
   };
 
   // projectView.renderIndex = function() {
