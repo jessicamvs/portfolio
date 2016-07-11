@@ -26,6 +26,28 @@
   //   return theCompiled;
   // };
 
+  Project.findWhere = function(field, value, callback) {
+    var filtered = Project.all;
+    // .filter(function(ele) {
+    //   console.log(ele.field);
+    //   return ele.field === value;
+    // })
+    console.log(filtered);
+
+    callback(filtered);
+  };
+
+    // webDB.execute(
+    //   [
+    //     {
+    //       sql: 'SELECT * FROM articles WHERE ' + field + ' = ?;',
+    //       data: [value]
+    //     }
+    //   ],
+  //     callback
+  //   );
+  // };
+
   Project.prepareProjects = function(data) {
     data.sort(function(a,b) {
       return (new Date(b.publishDate)) - (new Date(a.publishDate));
