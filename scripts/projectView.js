@@ -52,15 +52,6 @@
     });
   };
 
-  // projectView.moreLink = function() {
-  //   $('.about-project *:nth-of-type(n+2)').hide();
-  //   $('#projectDisplay').on('click', 'article > a', function(e){
-  //     e.preventDefault();
-  //     $(this).parent().find('.about-project').children().show();
-  //     $(this).hide();
-  //   });
-  // };
-
   projectView.index = function(projects) {
     $('#projects').show().siblings().hide();
 
@@ -81,7 +72,6 @@
     projectView.fillFilters();
     projectView.handleFilter();
     projectView.hamburgerToggle();
-    // projectView.moreLink();
     if ($('#projectDisplay article').length > 1) {
       $('.about-project *:nth-of-type(n+2)').hide();
     }
