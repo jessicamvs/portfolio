@@ -5,13 +5,14 @@
 
   myRepos.requestRepos = function(callback) {
     $.ajax({
-      url: 'github/user/repos',
+      url: 'github/user/repos' +
+            '?per_page=100' +
+            '&sort=updated',
       type: 'GET',
       success: function(data) {
         myRepos.all = data;
-        callback();
       }
-    });
+    }).done(callback);
   };
 
   module.myRepos = myRepos;

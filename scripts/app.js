@@ -10,20 +10,14 @@
 
   Project.all = [];
 
-  Project.prototype.toHtml = function() {
-
-    Handlebars.registerHelper('daysAgoPub', function() {
-      this.daysAgo = parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000);
-      this.publishStatus = this.publishDate ? 'published about ' + this.daysAgo + ' days ago' : '(draft)';
-      return this.publishStatus;
+  Project.findWhere = function(value, callback) {
+    var filtered = Project.all.filter(function(ele) {
+      return ele.title === value;
     });
 
-    var theTemplateScript = $('#projectTemplate').html();
-    var theTemplate = Handlebars.compile(theTemplateScript);
+    console.log(filtered);
 
-    var theCompiled = theTemplate(this);
-
-    return theCompiled;
+    callback(filtered);
   };
 
   Project.prepareProjects = function(data) {

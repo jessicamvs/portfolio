@@ -2,6 +2,18 @@
 
   var projectView = {};
 
+  var render = function(project) {
+
+    Handlebars.registerHelper('daysAgoPub', function() {
+      project.daysAgo = parseInt((new Date() - new Date(project .publishDate)) / 60 / 60 / 24 / 1000);
+      project.publishStatus = project .publishDate ? 'published about ' + project.daysAgo + ' days ago' : '(draft)';
+      return project .publishStatus;
+    });
+
+    var theTemplate = Handlebars.compile($('#projectTemplate').html());
+
+    return theTemplate(project);
+  };
 
   projectView.fillFilters = function() {
     $('article').each(function() {
@@ -40,18 +52,12 @@
     });
   };
 
-  projectView.moreLink = function() {
-    $('.about-project *:nth-of-type(n+2)').hide();
-    $('#projectDisplay').on('click', 'article > a', function(e){
-      e.preventDefault();
-      $(this).parent().find('.about-project').children().show();
-      $(this).hide();
-    });
-  };
+  projectView.index = function(projects) {
+    $('#projects').show().siblings().hide();
 
-  projectView.renderIndex = function() {
-    Project.all.forEach(function(obj) {
-      $('#projectDisplay').append(obj.toHtml());
+    $('#projectDisplay article').remove();
+    projects.forEach(function(a) {
+      $('#projectDisplay').append(render(a));
     });
 
     $('#totalProjects').text(Project.all.length);
@@ -66,7 +72,9 @@
     projectView.fillFilters();
     projectView.handleFilter();
     projectView.hamburgerToggle();
-    projectView.moreLink();
+    if ($('#projectDisplay article').length > 1) {
+      $('.about-project *:nth-of-type(n+2)').hide();
+    }
   };
 
   module.projectView = projectView;
