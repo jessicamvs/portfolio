@@ -69,6 +69,15 @@
       $('#projectDisplay').append(render(a));
     });
 
+    $('#totalProjects').text(Project.all.length);
+    $('#wordCount').text(Project.totalNumAboutWords());
+
+    var template = Handlebars.compile($('#statTemplate').html());
+
+    Project.numWordsInAbout().forEach(function(ele) {
+      $('#statList').append(template(ele));
+    });
+
     projectView.fillFilters();
     projectView.handleFilter();
     projectView.hamburgerToggle();
@@ -77,26 +86,6 @@
       $('.about-project *:nth-of-type(n+2)').hide();
     }
   };
-
-  // projectView.renderIndex = function() {
-  //   Project.all.forEach(function(obj) {
-  //     $('#projectDisplay').append(obj.toHtml());
-  //   });
-  //
-  //   $('#totalProjects').text(Project.all.length);
-  //   $('#wordCount').text(Project.totalNumAboutWords());
-  //
-  //   var template = Handlebars.compile($('#statTemplate').html());
-  //
-  //   Project.numWordsInAbout().forEach(function(ele) {
-  //     $('#statList').append(template(ele));
-  //   });
-  //
-  //   projectView.fillFilters();
-  //   projectView.handleFilter();
-  //   projectView.hamburgerToggle();
-  //   projectView.moreLink();
-  // };
 
   module.projectView = projectView;
 
