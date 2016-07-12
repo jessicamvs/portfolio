@@ -64,7 +64,7 @@
   projectView.index = function(projects) {
     $('#projects').show().siblings().hide();
 
-    $('#projectDisplay section').remove();
+    $('#projectDisplay article').remove();
     projects.forEach(function(a) {
       $('#projectDisplay').append(render(a));
     });
@@ -73,7 +73,7 @@
     projectView.handleFilter();
     projectView.hamburgerToggle();
     // projectView.moreLink();
-    if ($('#projectDisplay section').length > 1) {
+    if ($('#projectDisplay article').length > 1) {
       $('.about-project *:nth-of-type(n+2)').hide();
     }
   };
